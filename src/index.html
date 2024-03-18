@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script
+      type="text/javascript"
+      src="https://jssip.net/download/releases/jssip-3.10.0.min.js"
+    ></script>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <style></style>
+    <div id="callControl">
+      <h2>SoftPhone JS SIP</h2>
+
+      <form id="login-form">
+        <input name="login" type="text" placeholder="введите логин..." />
+        <input name="password" type="text" placeholder="введите пароль..." />
+        <input name="server" type="text" placeholder="укажите сервер" />
+        <button id="login-btn">Сохранить</button>
+      </form>
+      <div id="to">
+        <input
+          id="num"
+          type="text"
+          placeholder="Например, sip:0341262@voip.uiscom.ru"
+        />
+      </div>
+      <div id="call">Вызов</div>
+
+      <div id="hangup">Завершить</div>
+      <div id="callStatus">Статус звонка</div>
+      <p id="callTimer">00:00</p>
+    </div>
+
+    <script src="./script.js"></script>
+    <audio id="ringtone" src="./sounds/04335.mp3" preload="auto"></audio>
+  </body>
+</html>
