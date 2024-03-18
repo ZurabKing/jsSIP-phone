@@ -1,4 +1,3 @@
-const socket = new JsSIP.WebSocketInterface("wss://voip.uiscom.ru");
 const form = document.querySelector("#login-form");
 let ua;
 let timeInterval;
@@ -22,6 +21,8 @@ form.addEventListener("submit", (e) => {
 
   ua.on("registered", function (e) {
     console.log("registered");
+
+    document.getElementById("login-btn").textContent = "сохранено!";
   });
   ua.on("unregistered", function (e) {
     console.log("unregistered");

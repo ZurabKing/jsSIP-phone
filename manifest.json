@@ -1,29 +1,18 @@
 {
-  "manifest_version": 3,
-  "name": "SoftPhone",
+  "name": "SoftPhone JS SIP",
+  "description": "Хром расширения для звонков по SIP",
   "version": "1.0",
-  "description": "Хром расширение для звонков",
-  "permissions": ["activeTab", "storage"],
-  "background": {
-    "service_worker": "./src/script.js"
+  "manifest_version": 3,
+  "action": {
+    "default_popup": "popup.html"
   },
+  "permissions": ["scripting", "activeTab"],
+
   "content_scripts": [
     {
       "matches": ["<all_urls>"],
-      "js": ["./src/script.js"]
+      "js": ["popup.js", "./sip/jssip.min.js"],
+      "run_at": "document_end"
     }
-  ],
-  "browser_action": {
-    "default_popup": "index.html",
-    "default_icon": {
-      "16": "images/icon16.png",
-      "48": "images/icon48.png",
-      "128": "images/icon128.png"
-    }
-  },
-  "icons": {
-    "16": "images/icon16.png",
-    "48": "images/icon48.png",
-    "128": "images/icon128.png"
-  }
+  ]
 }

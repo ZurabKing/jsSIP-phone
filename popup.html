@@ -1,14 +1,12 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <script
-      type="text/javascript"
-      src="https://jssip.net/download/releases/jssip-3.10.0.min.js"
-    ></script>
-    <link rel="stylesheet" href="./style.css" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="./sip/jssip.min.js"></script>
+    <link rel="stylesheet" href="./popup.css" />
   </head>
   <body>
-    <style></style>
     <div id="callControl">
       <h2>SoftPhone JS SIP</h2>
 
@@ -31,8 +29,8 @@
       <div id="callStatus">Статус звонка</div>
       <p id="callTimer">00:00</p>
     </div>
+    <script src="./popup.js"></script>
 
-    <script src="./script.js"></script>
     <audio id="ringtone" src="./sounds/04335.mp3" preload="auto"></audio>
   </body>
 </html>
